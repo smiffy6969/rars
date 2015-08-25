@@ -1,7 +1,7 @@
 # R.A.R.S. Razor Authenticating Resource Server
 
 
-__Browser Support__ - IE9+, Chrome, FF, Safari, Opera
+__REQUIRES__ - PHP5
 
 
 Requires a DB connection with the following tables...
@@ -30,6 +30,15 @@ Requires a DB connection with the following tables...
 * Column: activate_token (string 255)
 * Column: reminder_token (string 255)
 * Column: reminder_time (timestamp)
+
+
+Once the DB is set, you should configure the server via the index.php file, this will configure the system, phpmailer (bundled) and other things to get a fully fledged resource erver running on PHP.
+
+
+Once you have the system setup and running, you may add resources to the rars/api folder using a resource/type structure such as user/access which is already present for accessing the user table via various methods. This will allow you to serve your DB to your front end application via REST/JSON.
+
+
+Various tools are provided in the extended class (RarsAPI) such as authentication checking (usng the authorization header), please see user/api files for how to use these tools..... more to follow....
 
 
 TBC...
